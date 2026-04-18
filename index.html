@@ -8,14 +8,12 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', sans-serif; }
     .wrap { max-width: 480px; margin: 0 auto; padding: 16px; }
-
     .header-bar {
       background: #1a5c38; color: white; text-align: center;
       padding: 22px 16px 18px; border-radius: 14px; margin-bottom: 16px;
     }
     .header-bar .shop-name { font-size: 24px; font-weight: 600; letter-spacing: 2px; }
     .header-bar .shop-sub { font-size: 14px; margin-top: 5px; opacity: 0.88; }
-
     .step-card {
       background: #fff; border: 1px solid #e8e8e8;
       border-radius: 14px; padding: 20px; margin-bottom: 14px;
@@ -27,20 +25,17 @@
       padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
     }
     .step-title { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 14px; }
-
     .field-label {
       display: block; font-size: 15px; font-weight: 600;
       color: #222; margin-bottom: 6px; margin-top: 14px;
     }
     .field-label:first-of-type { margin-top: 0; }
-
     input[type="text"], input[type="tel"], input[type="date"] {
       width: 100%; height: 50px; font-size: 16px; padding: 0 14px;
       border: 1.5px solid #ddd; border-radius: 10px;
       background: #fff; color: #1a1a1a; outline: none;
     }
     input:focus { border-color: #1a5c38; }
-
     .string-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
     .string-card {
       border: 1.5px solid #e0e0e0; border-radius: 10px;
@@ -58,32 +53,33 @@
     }
     .string-consult.selected { border-color: #1a5c38; background: #e8f5ee; }
     .string-consult input[type="radio"] { display: none; }
-
+    .string-labor {
+      display: block; border: 1.5px solid #ffe0b2;
+      border-radius: 10px; padding: 13px; cursor: pointer;
+      margin-top: 10px; transition: all 0.15s; background: #fffaf5;
+    }
+    .string-labor.selected { border-color: #e65100; background: #fff3e0; }
+    .string-labor input[type="radio"] { display: none; }
+    .labor-badge {
+      display: inline-block; background: #fff3e0; color: #e65100;
+      font-size: 11px; font-weight: 700; padding: 2px 8px;
+      border-radius: 20px; margin-bottom: 6px; border: 1px solid #ffcc80;
+    }
     .time-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 4px; }
     .time-btn {
       padding: 12px 0; text-align: center; font-size: 14px;
       border: 1.5px solid #ddd; border-radius: 10px; cursor: pointer;
-      color: #1a1a1a; background: #fff; line-height: 1.3;
-      transition: all 0.12s;
+      color: #1a1a1a; background: #fff; line-height: 1.3; transition: all 0.12s;
     }
     .time-btn:hover:not(.booked) { border-color: #1a5c38; background: #f0faf4; }
     .time-btn.selected { background: #1a5c38; color: white; border-color: #1a5c38; font-weight: 600; }
-    .time-btn.booked {
-      background: #f5f5f5; color: #bbb; border-color: #e8e8e8; cursor: not-allowed;
-    }
-    .time-btn.booked .booked-label {
-      display: block; font-size: 10px; color: #e74c3c; font-weight: 600; margin-top: 2px;
-    }
-
-    .time-legend {
-      display: flex; gap: 14px; margin-top: 12px; font-size: 12px;
-      color: #888; align-items: center; flex-wrap: wrap;
-    }
+    .time-btn.booked { background: #f5f5f5; color: #bbb; border-color: #e8e8e8; cursor: not-allowed; }
+    .time-btn.booked .booked-label { display: block; font-size: 10px; color: #e74c3c; font-weight: 600; margin-top: 2px; }
+    .time-legend { display: flex; gap: 14px; margin-top: 12px; font-size: 12px; color: #888; align-items: center; flex-wrap: wrap; }
     .legend-dot { width: 12px; height: 12px; border-radius: 3px; display: inline-block; margin-right: 4px; vertical-align: middle; }
     .legend-avail { background: #fff; border: 1.5px solid #ddd; }
     .legend-booked { background: #f5f5f5; border: 1px solid #e8e8e8; }
     .legend-selected { background: #1a5c38; }
-
     .notice-box {
       background: #fffbea; border: 1px solid #f5c518;
       border-radius: 10px; padding: 12px 14px;
@@ -94,31 +90,21 @@
       border-radius: 10px; padding: 13px 14px;
       font-size: 14px; color: #5a4500; margin-bottom: 14px; line-height: 1.8;
     }
-
     .submit-btn {
       width: 100%; height: 58px; background: #1a5c38; color: white;
       font-size: 20px; font-weight: 700; border: none;
-      border-radius: 14px; cursor: pointer; margin-top: 4px;
-      letter-spacing: 0.5px; transition: opacity 0.15s;
+      border-radius: 14px; cursor: pointer; margin-top: 4px; transition: opacity 0.15s;
     }
     .submit-btn:disabled { background: #aaa; cursor: not-allowed; }
     .submit-btn:active:not(:disabled) { opacity: 0.85; }
-
-    .footer-info {
-      text-align: center; font-size: 13px; color: #888;
-      margin-top: 16px; line-height: 2.1; padding-bottom: 24px;
-    }
+    .footer-info { text-align: center; font-size: 13px; color: #888; margin-top: 16px; line-height: 2.1; padding-bottom: 24px; }
     .phone-link { color: #1a5c38; font-weight: 600; text-decoration: none; }
-
     .loading-msg { text-align: center; font-size: 14px; color: #888; padding: 10px 0; display: none; }
-
     .error-msg {
       background: #fdecea; border: 1px solid #f5c6c6;
       border-radius: 10px; padding: 12px 14px;
-      font-size: 14px; color: #c0392b; margin-top: 10px; display: none; line-height: 1.6;
+      font-size: 14px; color: #c0392b; margin-top: 10px; display: none; line-height: 1.7; white-space: pre-line;
     }
-
-    /* 완료 화면 */
     .confirm-screen {
       display: none; background: #fff; border: 1px solid #e8e8e8;
       border-radius: 14px; padding: 36px 20px; text-align: center;
@@ -128,15 +114,13 @@
     .confirm-title { font-size: 24px; font-weight: 700; color: #1a5c38; margin-bottom: 8px; }
     .confirm-desc { font-size: 15px; color: #666; line-height: 1.8; }
     .confirm-detail {
-      background: #f8f8f8; border-radius: 10px;
-      padding: 16px 18px; margin: 18px 0; text-align: left;
-      font-size: 15px; color: #1a1a1a; line-height: 2.3;
+      background: #f8f8f8; border-radius: 10px; padding: 16px 18px; margin: 18px 0;
+      text-align: left; font-size: 15px; color: #1a1a1a; line-height: 2.3;
     }
     .kakao-add-btn {
       display: block; background: #FEE500; color: #3A1D1D;
       font-size: 17px; font-weight: 700; padding: 15px 0;
-      border-radius: 12px; text-decoration: none;
-      margin: 16px 0 10px; text-align: center;
+      border-radius: 12px; text-decoration: none; margin: 16px 0 10px; text-align: center;
     }
     .call-row { font-size: 14px; color: #888; margin-top: 12px; line-height: 2.2; }
   </style>
@@ -150,7 +134,6 @@
 
   <div id="form-area">
 
-    <!-- 1단계: 스트링 선택 -->
     <div class="step-card">
       <span class="step-label">1단계</span>
       <div class="step-title">스트링 선택</div>
@@ -180,17 +163,26 @@
           <div class="string-price">35,000원</div>
         </label>
       </div>
-      <label class="string-consult selected" onclick="selectConsult(this)">
+
+      <label class="string-labor" onclick="selectString(this)">
+        <input type="radio" name="string" value="공임비 (본인 줄 지참)">
+        <div class="labor-badge">✂️ 줄 지참 할인</div>
+        <div class="string-name">라켓줄 직접 가져오시는 경우</div>
+        <div class="string-info">본인 줄 지참 시 단순 공임비만 적용</div>
+        <div class="string-price">15,000원</div>
+      </label>
+
+      <label class="string-consult selected" onclick="selectString(this)">
         <input type="radio" name="string" value="상담 후 결정" checked>
         <div class="string-name">잘 모르겠어요 — 방문 후 추천받을게요</div>
         <div class="string-info" style="margin-top:3px;">현장에서 친절하게 상담해 드립니다</div>
       </label>
+
       <div class="notice-box">
         💡 어떤 스트링이 맞을지 몰라도 괜찮아요! 방문하시면 함께 골라드릴게요.
       </div>
     </div>
 
-    <!-- 2단계: 날짜 선택 -->
     <div class="step-card">
       <span class="step-label">2단계</span>
       <div class="step-title">방문 날짜 선택</div>
@@ -198,7 +190,6 @@
       <input type="date" id="visit-date" onchange="renderTimes()">
     </div>
 
-    <!-- 3단계: 시간 선택 -->
     <div class="step-card" id="time-card" style="display:none;">
       <span class="step-label">3단계</span>
       <div class="step-title">방문 시간 선택</div>
@@ -214,7 +205,6 @@
       </div>
     </div>
 
-    <!-- 4단계: 고객 정보 -->
     <div class="step-card">
       <span class="step-label">4단계</span>
       <div class="step-title">고객 정보 입력</div>
@@ -230,10 +220,7 @@
       미리 채널 친구 추가를 해두시면 빠르게 받으실 수 있어요!
     </div>
 
-    <div class="error-msg" id="error-msg">
-      ⚠️ 예약 전송 중 오류가 발생했습니다.<br>
-      잠시 후 다시 시도하거나 전화로 예약해 주세요.
-    </div>
+    <div class="error-msg" id="error-msg"></div>
 
     <button class="submit-btn" id="submit-btn" onclick="submitForm()">예약 신청하기</button>
 
@@ -245,7 +232,6 @@
     </div>
   </div>
 
-  <!-- 완료 화면 -->
   <div class="confirm-screen" id="confirm-screen">
     <div class="confirm-icon">✅</div>
     <div class="confirm-title">예약이 접수되었습니다!</div>
@@ -270,12 +256,7 @@
   let selectedTime = '';
 
   function selectString(el) {
-    document.querySelectorAll('.string-card, .string-consult').forEach(c => c.classList.remove('selected'));
-    el.classList.add('selected');
-    el.querySelector('input').checked = true;
-  }
-  function selectConsult(el) {
-    document.querySelectorAll('.string-card, .string-consult').forEach(c => c.classList.remove('selected'));
+    document.querySelectorAll('.string-card, .string-consult, .string-labor').forEach(c => c.classList.remove('selected'));
     el.classList.add('selected');
     el.querySelector('input').checked = true;
   }
@@ -311,7 +292,7 @@
     try {
       const res = await fetch(SCRIPT_URL + '?action=getBooked&date=' + dateVal);
       const json = await res.json();
-      booked = json.booked || [];
+      booked = (json.booked || []).map(t => String(t).trim());
     } catch(e) {
       booked = [];
     }
@@ -359,12 +340,23 @@
     errBox.style.display = 'none';
 
     try {
-      await fetch(SCRIPT_URL, {
+      const res = await fetch(SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'text/plain' },
         body: JSON.stringify({ action: 'reserve', string: string.value, date, time: selectedTime, name, phone })
       });
+
+      let result = {};
+      try { result = await res.json(); } catch(e) { result = { result: 'success' }; }
+
+      if (result.result === 'duplicate') {
+        btn.disabled = false;
+        btn.textContent = '예약 신청하기';
+        errBox.textContent = '⚠️ 선택하신 ' + selectedTime + ' 시간은 이미 예약이 완료되었습니다.\n다른 시간을 선택해 주세요.';
+        errBox.style.display = 'block';
+        await renderTimes();
+        return;
+      }
 
       const d = new Date(date + 'T00:00:00');
       const days = ['일','월','화','수','목','금','토'];
@@ -384,6 +376,7 @@
     } catch(err) {
       btn.disabled = false;
       btn.textContent = '예약 신청하기';
+      errBox.textContent = '⚠️ 예약 전송 중 오류가 발생했습니다. 잠시 후 다시 시도하거나 전화로 예약해 주세요.';
       errBox.style.display = 'block';
     }
   }
